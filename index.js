@@ -8,7 +8,7 @@ class Godkits {
         while (Date.now() < currentNow + millisecond) {}
     }
 
-    static timeout(callback, millisecond) {
+    static countDown(callback, millisecond) {
         Godkits.sleep(millisecond);
         callback();
     }
