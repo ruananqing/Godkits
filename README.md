@@ -1,6 +1,5 @@
 # <b>Introduction:</b>
-<font color="red" size = "3px">godkits</font>
-is an interesting javascript utils
+God-specific javascript utils
 
 # <b>Installation:</b>
 ```shell
@@ -68,7 +67,7 @@ console.log(new Date());
 // 2019-04-19T09:54:06.167Z
 ```
 
-## <b>Godkits.countDown(callback, millisecond)</b>
+## <b>Godkits.countDown(callback, milliseconds)</b>
 * ```callback``` \<function\>
 * ```milliseconds``` \<number\>
 * ```Returns``` \<void\>
@@ -83,7 +82,6 @@ function logTime() {
 // native timeout method (notice the end time below)
 
 console.log("start time: " + new Date());
-
 setTimeout(logTime, 3000);
 setTimeout(logTime, 3000);
 setTimeout(logTime, 3000);
@@ -95,8 +93,8 @@ setTimeout(logTime, 3000);
 ```
 ```js
 // Godkits' countDown method (notice the end time below)
-console.log("start time: " + new Date());
 
+console.log("start time: " + new Date());
 Godkits.countDown(logTime, 3000);
 Godkits.countDown(logTime, 3000);
 Godkits.countDown(logTime, 3000);
@@ -107,10 +105,10 @@ Godkits.countDown(logTime, 3000);
 //   end time: Fri Apr 19 2019 18:22:08 GMT+0800 (GMT+08:00)
 ```
 
-## <b>Godkits.addInterval(intervalName, callback, millisecond)</b>
+## <b>Godkits.addInterval(intervalName, callback, milliseconds)</b>
 * ```intervalName``` \<string\>
 * ```callback``` \<function\>
-* ```millisecond``` \<number\>
+* ```milliseconds``` \<number\>
 * ```Returns``` \<boolean\>
 ### a method looks like the native setInterval(), but more humanizing
 
@@ -131,11 +129,11 @@ Godkits.clearInterval("haha");
 ### a method looks like the native clearInterval(), but more humanizing
 
 ```js
-// native interval method
+// native interval methods
 let haha = setInterval(() => { console.log("haha"); }, 3000);
 clearInterval(haha);
 
-// Godkits interval method
+// Godkits interval methods
 Godkits.addInterval("haha", () => { console.log("haha"); }, 3000);
 Godkits.clearInterval("haha");
 ```
