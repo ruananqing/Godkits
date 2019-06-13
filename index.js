@@ -106,6 +106,24 @@ class Godkits {
         whileObject(obj)
         return result;
     }
+
+    static randomSample(sample, num) {
+        let arr = Object.assign(sample);
+        if (num > arr.length || num < 1) {
+            console.log(`the number of the randomSample should be in [1, sample.length)`);
+            return null;
+        }
+        let outputArr = [];
+        for (let i = 0; i < num; i++) {
+            let nowIndex = Math.floor(Math.random() * arr.length); //Math.floor保证了nowIndex不会取到arr.length
+            outputArr[i] = arr[nowIndex];
+            let temp = arr[nowIndex];
+            arr[nowIndex] = arr[arr.length - 1];
+            arr[arr.length - 1] = temp;
+            arr.pop(); //pop()方法会改变原数组长度
+        }
+        return outputArr;
+    }
 }
 
 // static property

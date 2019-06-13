@@ -139,6 +139,20 @@ Godkits.clearInterval("haha");
 ```
 
 
+## <b>Godkits.randomSample(sample, number)</b>
+* ```sample``` \<array\>
+* ```array``` \<number\>
+* ```Returns``` \<array\>
+
+### a method to return a shuffled (subset) array of the sample array
+
+```js
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(Godkits.randomSample(a, 6));
+// [ 5, 6, 8, 2, 9, 4 ]
+console.log(Godkits.randomSample(a, 3));
+// [ 3, 7, 1 ]
+```
 
 
 
