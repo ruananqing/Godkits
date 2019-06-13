@@ -13,11 +13,11 @@ let Godkits = require('godkits');
 # <b>API:</b>
 
 
-## <b>Godkits.dissolveObject(obj)</b>
+## <font color=red><b>Godkits.dissolveObject(obj)</b></font>
 * ```obj``` \<object\>
 * ```Returns``` \<array\>
 
-### a method to dissolve an object, and then return an array which contains keys and values of the object, even if the value is still an object or an array
+#### a method to dissolve an object, and then return an array which contains keys and values of the object, even if the value is still an object or an array
 
 ```js
 let obj = {
@@ -39,11 +39,11 @@ console.log(Godkits.dissolveObject(obj));
 // [ 'a',  'b',  'c',  'd',  'e',  'f',  'g',  'h',  'i',  [Function: i],  'j',  'k',  'l',  'm',  'n' ]
 ```
 
-## <b>Godkits.flatArray(arr)</b>
+## <font color=red><b>Godkits.flatArray(arr)</b></font>
 * ```arr``` \<array\>
 * ```Returns``` \<array\>
 
-### a method to flat an array
+#### a method to flat an array
 
 ```js
 let a = [[[[1, 2], 3], 4], 5, [6, [7, [[8, [[[[9]]]]]]], [10]]];
@@ -53,10 +53,10 @@ console.log(Godkits.flatArray(a));
 ```
 
 
-## <b>Godkits.sleep(milliseconds)</b>
+## <font color=red><b>Godkits.sleep(milliseconds)</b></font>
 * ```milliseconds``` \<number\>
 * ```Returns``` \<void\>
-### a blocking sleep method
+#### a blocking sleep method
 
 ```js
 console.log(new Date());
@@ -67,11 +67,11 @@ console.log(new Date());
 // 2019-04-19T09:54:06.167Z
 ```
 
-## <b>Godkits.countDown(callback, milliseconds)</b>
+## <font color=red><b>Godkits.countDown(callback, milliseconds)</b></font>
 * ```callback``` \<function\>
 * ```milliseconds``` \<number\>
 * ```Returns``` \<void\>
-### a more intuitionistic method to invoke the callback later than the native timeout method
+#### a more intuitionistic method to invoke the callback later than the native timeout method
 
 ```js
 function logTime() {
@@ -105,12 +105,12 @@ Godkits.countDown(logTime, 3000);
 //   end time: Fri Apr 19 2019 18:22:08 GMT+0800 (GMT+08:00)
 ```
 
-## <b>Godkits.addInterval(intervalName, callback, milliseconds)</b>
+## <font color=red><b>Godkits.addInterval(intervalName, callback, milliseconds)</b></font>
 * ```intervalName``` \<string\>
 * ```callback``` \<function\>
 * ```milliseconds``` \<number\>
 * ```Returns``` \<boolean\>
-### a method looks like the native setInterval(), but more humanizing
+#### a method looks like the native setInterval(), but more humanizing
 
 ```js
 // native interval method
@@ -122,11 +122,11 @@ Godkits.addInterval("haha", () => { console.log("haha"); }, 3000);
 Godkits.clearInterval("haha");
 ```
 
-## <b>Godkits.clearInterval(intervalName)</b>
+## <font color=red><b>Godkits.clearInterval(intervalName)</b></font>
 * ```intervalName``` \<string\>
 * ```Returns``` \<boolean\>
 
-### a method looks like the native clearInterval(), but more humanizing
+#### a method looks like the native clearInterval(), but more humanizing
 
 ```js
 // native interval methods
@@ -139,12 +139,12 @@ Godkits.clearInterval("haha");
 ```
 
 
-## <b>Godkits.randomSample(sample, number)</b>
+## <font color=red><b>Godkits.randomSample(sample, number)</b></font>
 * ```sample``` \<array\>
 * ```array``` \<number\>
 * ```Returns``` \<array\>
 
-### a method to return a shuffled (subset) array of the sample array
+#### a method to return a shuffled (subset) array of the sample array
 
 ```js
 let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
